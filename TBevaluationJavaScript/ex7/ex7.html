@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--balise HTML meta Viewport obligatoire pour rendre le site responsive-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--lien vers bootstrap toujours avant celui de la feuille de style CSS-->
+    <link rel="stylesheet" href="assets/css/ex7.css" />
+    <!--lien vers feuille de style CSS-->
+    <title>Contact</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!--début du div bootstrap container-->
+
+        <header class="d-flex justify-content-between">
+            <!--Bandeau site avec logo + slogan-->
+            <img class="img-fluid" src="assets/images/jarditou_logo.jpg" alt="logo_jarditou" title="logo Jarditou" />
+            <p>Tout le jardin</p>
+        </header>
+        <!--bannière promo-->
+        <section>
+            <img class="img-fluid" src="assets/images/promotion.jpg" alt="promotion" title="promotion" />
+        </section>
+
+        <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <button class="navbar-toggler" data-target="#collapsibleNavbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!">Accueil</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!">Tableau</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ex7.html">Formulaire</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="pt-1">* Ces zones sont obligatoires</p>
+                    <!--début du formulaire Bootstrap-->
+                    <form method="post" action="http://bienvu.net/script.php" onsubmit="return verifForm(this)"> <!--pour autoriser ou bloquer l'envoi du formulaire on appelle notre méga-fonction verifForm (qui va appeler nos trois fonctions) au moment où l'utilisateur envoi son formulaire. Si la méga-fonction (donc au moins une de nos trois fonctions) renvoi false, nous bloquons l'envoi des données-->
+                        <fieldset>
+                            <legend>Vos coordonnées</legend>
+
+                            <div class="form-group">
+                                <label for="nom">Votre nom*</label>
+                                <input class="form-control" type="text" name="nom" id="nom" onblur="verifNom(this)" /> <!-- on appelle notre fonction verifNom au moment où le champ nom perd le focus (onblur)-->
+                                <span class="text-danger" id="aideNom"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prenom">Votre prénom* :</label>
+                                <input class="form-control" type="text" name="prenom" id="prenom"
+                                    onblur="verifPrenom(this)" />
+                                <span class="text-danger" id="aidePrenom"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateDeNaissance">Date Naissance* :</label>
+                                <input class="form-control" type="date" name="dateDeNaissance" required min="1915-01-01"
+                                    max="2002-01-01" />
+                                <!--L'utilisateur doit avoir au moins 18 ans-->
+                            </div>
+
+                            <div class="form-check form-check-inline pb-2">
+                                <label class="form-check-label" for="sexe">Sexe :</label>
+
+                                <input class="form-check-input" type="radio" name="sexe" id="feminin" />
+                                Féminin
+                                <input class="form-check-input" type="radio" name="sexe" id="masculin" />
+                                Masculin
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adresse">Adresse :</label>
+                                <input class="form-control" type="text" name="adresse" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="codePostal">Code postal :</label>
+                                <input class="form-control" type="text" name="codePostal" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ville">Ville :</label>
+                                <input class="form-control" type="text" name="ville" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pays">Pays</label>
+                                <select class="form-control" name="pays">
+                                    <option value="none">Sélectionnez votre pays de résidence</option>
+                                    <option value="fr">FRANCE</option>
+                                    <option value="en">ENGLAND</option>
+                                    <option value="es">ESPANA</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email* :</label>
+                                <input class="form-control" type="text" name="email" id="email"
+                                    placeholder="dave.loper@afpa.fr" onblur="verifEMail(this)" />
+                                <span class="text-danger" id="aideEMail"></span>
+                            </div>
+
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Votre demande</legend>
+
+                            <div class="form-group">
+                                <label for="sujet">Sujet*</label>
+                                <select class="form-control" name="sujet" required>
+                                    <option value="">Sélectionnez le sujet de votre demande</option>
+                                    <option value="Mes commandes">Mes commandes</option>
+                                    <option value="Question sur un produit">Question sur un produit</option>
+                                    <option value="Réclamation">Réclamation</option>
+                                    <option value="Autres. Merci de préciser: ">Autres</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Votre question*</label>
+                                <textarea class="form-control" name="question" rows="3" value="" required minlength="10"
+                                    maxlength="500"></textarea>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="form-check pb-2">
+                            <label class="form-check-label" for="cgu">
+                                <input class="form-check-input" type="checkbox" name="cgu" required />
+                                J'accepte le traitement informatique de ce formulaire.
+                            </label>
+                        </div>
+
+                        <input class="btn btn-primary" type="submit" value="Envoyer" id="bouton envoyer"></input>
+                        <input class="btn btn-primary" type="reset" value="Annuler"></input>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="menu mt-2 pt-3">
+            <ul>
+                <li class="list"><a class="link" href="#!">Mentions légales</a></li>
+                <li class="list"><a class="link" href="#!">Horaires</a></li>
+                <li class="list"><a class="link" href="#!">Plan du site</a></li>
+            </ul>
+        </footer>
+
+    </div>
+    <!--fin du div bootstrap container-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/ex7.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* DOCUMENT */
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* ELEMENTS */
+
+header>p {
+    font-size: 24px;
+    margin-top: auto;
+}
+
+header>img {
+    height: 70px;
+    width: 215px;
+}
+
+/* CLASSES */
+
+.menu {
+    background: #2b2d2f;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.menu .list {
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.link:link, .link:visited {
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+    header>p {
+        font-size: 18px;
+        margin-right: 5%;
+    }
+    section>img {
+        height: 150px;
+    }
+    .menu {
+        padding-right: 10%;
+    }
+    .menu .list {
+        display: flex;
+        flex-direction: column;
+    }
+}

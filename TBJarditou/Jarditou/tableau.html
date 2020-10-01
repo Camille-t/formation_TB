@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--balise HTML meta Viewport obligatoire pour rendre le site responsive-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--lien vers bootstrap toujours avant celui de la feuille de style CSS-->
+    <link rel="stylesheet" href="assets/css/jarditou.css" />
+    <!--lien vers feuille de style CSS-->
+    <link rel="stylesheet" href="assets/css/media.css">
+    <!--lien vers la media querie.css pour rendre le site responsive -->
+    <title>Tableau</title>
+</head>
+<div id="container-fluid contenu">
+    <!--début du div bootstrap container-fluid-->
+    <header>
+        <!--Bandeau site avec logo + slogan-->
+        <img class="logo" src="assets/images/jarditou_logo.jpg" alt="logo_jarditou" />
+        <div class="slogan text-center">Tout le jardin</div>
+    </header>
+    <!--bannière promo-->
+    <img class="promo" src="assets/images/promotion.jpg" alt="bannière_promo" />
+    <!--barre de navigation avec lien vers les différentes pages du site-->
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center navbar-dark">
+        <!--classe navbar, classe responsive à partir de laquelle la barre de navigation va passer de l'horizontale à la verticale ici sm, couleur de fond foncée, contenu de la barre de nav justifié et centré, couleur de texte blanc -->
+        <img class="navbar-brand" img src="assets/images/jarditou_arrosoir.jpg" alt="un arrosoir" style="width: 70px;">
+        <!--classe pour insérer logo dans barre de navigation-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tableau.html">Catalogue</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Nous contacter</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<body>
+    <div class="container section">
+        <!--début du div bootstrap container-->
+        <div class="table-responsive-sm">
+            <!--afin de rendre le tableau responsive on l'englobe dans une div avec en attribut classe table-responsive-->
+            <table class="table table-striped table-bordered table-hover">
+                <!--class bootsrap mise en page du tableau-->
+                <!--début du tableau-->
+                <thead class="thead-dark">
+                    <!--class bootsrap pour ajouter un fond foncé à la ligne d'en-tête du tableau-->
+                    <!--début en-tête du tableau-->
+                    <tr>
+                        <!--1ère ligne du tableau-->
+                        <th scope="col">Photo</th>
+                        <!--1ère cellule de la 1ère ligne du tableau-->
+                        <th scope="col">ID</th>
+                        <th scope="col">Catégorie</th>
+                        <th scope="col">Libellé</th>
+                        <th scope="col">Prix</th>
+                        <th scope="col">Couleur</th>
+                    </tr>
+                </thead>
+                <!--fin en-tête du tableau-->
+                <tbody>
+                    <tr>
+                        <th scope="row"><img class="img_fluid" src="assets/images/7.jpg" alt="Photo Barbecue 7"></th>
+                        <!-- la classe img_fluid rend le images responsives-->
+                        <td>7</td>
+                        <td>Barbecues</td>
+                        <td>Aramis</td>
+                        <td>110.00 €</td>
+                        <td>Brun</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><img class="img_fluid" src="assets/images/8.jpg" alt="Photo Barbecue 8"></th>
+                        <td>8</td>
+                        <td>Barbecues</td>
+                        <td>Athos</td>
+                        <td>249.99 €</td>
+                        <td>Noir</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><img class="img_fluid" src="assets/images/11.jpg" alt="Photo Barbecue 11"></th>
+                        <td>11</td>
+                        <td>Barbecues</td>
+                        <td>Clatronic</td>
+                        <td>135.90 €</td>
+                        <td>Chrome</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><img class="img_fluid" src="assets/images/12.jpg" alt="Photo Barbecue 12"></th>
+                        <td>12</td>
+                        <td>Barbecues</td>
+                        <td>Camping</td>
+                        <td>88.00 €</td>
+                        <td>Noir</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><img class="img_fluid" src="assets/images/13.jpg" alt="Photo Barbecue 13"></th>
+                        <td>13</td>
+                        <td>Brouettes</td>
+                        <td>Green</td>
+                        <td>49.00 €</td>
+                        <td>Verte</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--fin du tableau-->
+        </div>
+        <!--fin du div table responsive-->
+    </div>
+    <!--fin du div bootstrap container-->
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center navbar-dark">
+        <!--classe navbar, classe responsive à partir de laquelle la barre de navigation va passer de l'horizontale à la verticale ici sm, couleur de fond foncée, contenu de la barre de nav justifié et centré, couleur de texte blanc -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="responsive">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="mentions_légales.html">Mentions légales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="horaires.html">Horaires</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="plan_du_site.html">Plan du site</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <!--fin du div bootstrap container-fluid-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/jarditou.js"></script>
+</body>
+</html>

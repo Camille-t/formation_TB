@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="exercice_formulaires.css" />
+    <title>Contact</title>
+</head>
+
+<body>
+    <form method="POST" action="traitement.php">
+        <h2>Vos coordonnées</h2>
+        <h3><span class="obligatoire">*Ces zones sont obligatoires pour envoyer le formulaire.</span></h3>
+        <p>
+            <label for="societe" class="form_col">Société :</label>
+            <input type="text" name="societe" id="societe" class="form_col2" value="" required><span
+                id="aideSociete" class="obligatoire">*</span>
+            <!--L'élément <input> est utilisé pour créer un contrôle interactif dans le form qui permet à l'utilisateur de saisir des données. Les saisies possibles et le comportement de l'élément <input> dépend de la valeur indiquée dans son attribut type.-->
+        </p>
+        <p>
+            <label for="personneAContacter" class="form_col">Personne à contacter :</label>
+            <input type="text" name="personneAContacter" id="personneAContacter" class="form_col2" value=""
+                required><span id="aidePersonneAContacter" class="obligatoire">*</span>
+        </p>
+        <p>
+            <label for="adresseDeLentreprise" class="form_col">Adresse de l'entreprise :</label>
+            <textarea name="adresseDeLentreprise" id="adresseDeLentreprise" class="form_col2" required></textarea>
+        </p>
+        <p>
+            <label for="codePostal" class="form_col">Code Postal :</label>
+            <input type="" name="codePostal" id="codePostal" class="form_col2" value="" required>
+        </p>
+        <p>
+            <label for="ville" class="form_col">Ville :</label>
+            <input type="text" name="ville" id="ville" class="form_col2" value="" required><span
+                id="aideVille" class="obligatoire">*</span>
+        </p>
+        <p>
+            <label for="email" class="form_col">E-mail :</label>
+            <input type="email" name="email" id="email" class="form_col2" value="" required><span
+                id = "aideEmail" class="obligatoire">*</span>
+        </p>
+        <p>
+            <label for="telephone" class="form_col">Téléphone :</label>
+            <input type="tel" name="telephone" id="telephone" class="form_col2" value="">
+        </p>
+        <p>
+            <label for="environnementTechnique" class="form_col">Sélectionnez l'environnement technique du projet
+                :</label>
+            <select name="environnementTechnique" id="environnementTechnique">
+                <option value="Merci d'en choisir un dans la liste ou de le nommer ici">Choisissez</option>
+                <option value="Access">Access</option>
+                <option value="Java">Java</option>
+                <option value="Delphi">Delphi</option>
+                <option value="windev">Windev</option>
+                <option value="visual Basic">Visual Basic</option>
+                <option value="Power Builder">Power Builder</option>
+                <option value="Internet">Internet</option>
+                <option value="Intranet">Intranet</option>
+                <option value="Windows NT">Windows NT</option>
+                <option value="Unix">Unix</option>
+                <option value="SQL Server">SQL Server</option>
+                <option value="Oracle">Oracle</option>
+                <option value="Merci de préciser : ">Autres...</option>
+            </select>
+            <textarea name="environnementTechnique" id="selection"></textarea>
+        </p>
+        <span class="form_col"></span>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
+    </form>
+    <script src="exercice_formulaires_js.js"></script>
+</body>
+
+</html>

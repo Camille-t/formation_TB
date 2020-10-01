@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Les formulaires PHP</title>
+</head>
+
+<body>
+
+    <form action="cible.php" method="post" enctype="multipart/form-data"> <!-- l'attribut enctype dans la balise form permet à l'utilisateur d'envoyer un fichier -->
+        <p>
+            Merci de saisir ton prénom :
+            <input type="text" name="prenom" value="" /> <!-- zone de texte -->
+            <input type="hidden" name="pseudo" value="" /> <!-- champ caché -->
+        </p>
+
+        <textarea name="message" rows="8" cols="45">
+            Saisis ton message ici.
+        </textarea>
+
+        <P>
+            Si tu souhaites nous faire parvenir un fichier tu peux le charger ici :
+            <input type="file" name="fichier à envoyer"/>
+        </P>
+        <p>
+            <input type="submit" value="Envoyer le fichier" />
+        </p>
+        
+
+        <p> Dans quel pays habites-tu?
+            <select name="choix">
+                <!-- liste déroulantes-->
+                <option value="en France.">France</option>
+                <option value="en Espagne.">Espagne</option>
+                <option value="en Italie.">Italie</option>
+                <option value="au Royaume-Uni.">Royaume-Uni</option>
+                <option value="au Canada.">Canada</option>
+                <option value="aux Etats-Unis.">Etats-Unis</option>
+                <option value="en Chine.">Chine</option>
+                <option value="au Japon.">Japon</option>
+            </select>
+        </p>
+
+        <p>Qu'as-tu choisi ce midi à la cantine?
+            <input type="checkbox" name="plat[]" value="des frites" />Frites
+            <input type="checkbox" name="plat[]" value="un steak" />Steak haché
+            <input type="checkbox" name="plat[]" value="des épinards" />Epinards
+            <input type="checkbox" name="plat[]" value="des carottes" />Carottes
+        </p>
+        <p>
+            Aimes-tu les huîtres ?
+            <input type="radio" name="huitres" value="oui" id="oui" checked="checked" /> <label for="oui">Oui</label>
+            <input type="radio" name="huitres" value="non" id="non" /> <label for="non">Non</label>
+        </p>
+
+        <input type="submit" value="Valider" /> <!-- bouton valider pour envoyer les informations du formulaire-->
+    </form>
+
+</body>
+
+</html>

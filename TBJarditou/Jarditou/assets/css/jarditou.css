@@ -1,0 +1,182 @@
+/*----------------------------------------ACCUEIL--------------------------------------------------------------*/
+.navbar-nav
+{
+    background-color: #343a40;
+}
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    align-items: flex-start;
+    /*le bloc logo démarre à gauche de la page*/
+    width: 30%;
+    /*le bloc slogan occupe 30% de la largeur de la page*/
+    height: auto;
+}
+
+.slogan {
+    align-items: flex-end;
+    /*le bloc slogan démarre à droite de la page*/
+    width: 70%;
+    /*le bloc slogan occupe 70% de la largeur de la page*/
+    height: auto;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+    /*supprime les puces de toutes les listes*/
+    display: inline;
+    /*tous les éléments de li apparaissent les uns à côté des autres et non les uns sous les autres*/
+    padding-right: 5px;
+    /*tous les éléments ont entre-eux un espacement de 0.5em*/
+    margin: auto;
+    /*les éléments de li sont centrés verticalement sur la flexbox nav*/
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+    height: 60px;
+}
+
+.promo {
+    width: 100%;
+    /*le bloc promo occupe 100% de la largeur de la page*/
+    height: auto;
+}
+
+.contenu {
+    display: flex;
+    margin: 5px;
+}
+
+section {
+    width: 70%;
+    padding-bottom: 2px;
+}
+
+article {
+    margin-bottom: 2px;
+}
+
+aside {
+    width: 30%;
+    align-items: flex-start;
+    background-color: gray;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/*-------------------------------------------------------------------------------------FORMULAIRE DE CONTACT--------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------------------------TABLEAU--------------------------------------------------------------------------------------------------*/
+
+table {
+    table-layout: fixed;
+    /*permet de définir une largeur fixe de colonne*/
+    max-width: 100%;
+    border-collapse: collapse;
+    /*permet d'éviter une superposition des bordures des différentes cellules du tableau*/
+    border: 1px solid black;
+    margin: 1px;
+}
+
+thead th:nth-child(1)
+/*sélectionne la première cellule de la thead*/
+
+    {
+    max-width: 40%
+}
+
+thead th:nth-child(2) {
+    max-width: 5%
+}
+
+thead th:nth-child(3) {
+    max-width: 20%
+}
+
+thead th:nth-child(4) {
+    max-width: 15%
+}
+
+thead th:nth-child(5) {
+    max-width: 10%
+}
+
+thead th:nth-child(6) {
+    max-width: 10%
+}
+
+th, td {
+    padding: 20px;
+}
+
+tbody {
+    border: 1px black solid;
+    text-align: center;
+}
+
+tbody td {
+    border: 1px black solid;
+    text-align: center;
+}
+
+th {
+    border: 1px black solid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*--------------------------------------------------------------------------------------BOOTSTRAP----------------------------------------------------------------------------------------------------*/
+
+.contenu {
+    height: 100%;
+}
+
+aside {
+    background-color: gray;
+}
+
+@media screen and (max-width:414px)
+/*dispositif media querie pour écrans d'une largeur inférieure à 414px*/
+
+    {
+    aside {
+        visibility: hidden;
+        /*la balise aside sera invisible si la résolution d'écran est inférieur à 414px de large*/
+    }
+    tr {
+        font-size: 9px;
+    }
+    .slogan 
+    {
+        font-size: 12px;
+    }
+}
